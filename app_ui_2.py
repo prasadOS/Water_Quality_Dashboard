@@ -140,7 +140,7 @@ def draw_header():
             )
 
     with c2:
-        st.title("SRI MUKTSAR SAHIB District - Water Quality Dashboard")
+        st.title("Integrated Water Quality Intelligence Dashboard")
 
 draw_header()
 

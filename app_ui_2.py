@@ -57,7 +57,7 @@ def password_gate():
 
     st.stop()
 
-password_gate()
+# password_gate()
 
 # Responsive layout + fixed header spacing + heading font sizes + logo styling
 st.markdown(

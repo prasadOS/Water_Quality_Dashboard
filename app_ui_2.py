@@ -122,10 +122,25 @@ RUNTIME_DIR = runtime_dir()
 
 
 def draw_header():
-    st.markdown(
-        "<h1 style='text-align:center;'>Water Quality Dashboard</h1>",
-        unsafe_allow_html=True
-    )
+    logo_path = DATA_DIR / "Resilience actions logo.png"
+
+    # Give logo its own space and keep title aligned
+    c1, c2 = st.columns([2.5, 9.5], vertical_alignment="center")
+
+    with c1:
+        if logo_path.exists():
+            b64 = base64.b64encode(logo_path.read_bytes()).decode("utf-8")
+            st.markdown(
+                f"""
+                <div class="resl-logo-box">
+                  <img class="resl-logo" src="data:image/png;base64,{b64}">
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+    with c2:
+        st.title("SRI MUKTSAR SAHIB District - Water Quality Dashboard")
 
 draw_header()
 
